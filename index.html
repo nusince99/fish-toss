@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Bucket o' Fish</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div id="score">Score: 0</div>
+    <div id="timer">60</div>
+    <div id="level">Level 1</div>
+  </div>
+
+  <div id="startScreen" class="overlay">
+    <h1>🪣 Bucket o' Fish</h1>
+    <p>Drag back from the fish to aim, let go to throw.<br>
+    Land fish in the bucket before time runs out!</p>
+    <p class="legend">
+      🐟 10pts &nbsp; 🐠 20pts &nbsp; 🦈 50pts &nbsp; ⭐ 100pts<br>
+      🐡 -15pts &nbsp; 🥾 -10pts &nbsp; <span class="warn">(avoid these!)</span>
+    </p>
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <div id="gameOverScreen" class="overlay hidden">
+    <h1>Time's Up!</h1>
+    <p id="finalScore">Score: 0</p>
+    <p id="bestScore">Best: 0</p>
+    <button id="restartBtn">Play Again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
